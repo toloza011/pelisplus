@@ -1,0 +1,418 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/*Maquetacion basica*/
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+}
+.main_header {
+  display: flex;
+  height: 80px;
+
+  width: 100%;
+}
+.main_content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main_content_center {
+  display: flex;
+  height: 90%;
+  width: 1200px;
+
+  background-color: rgb(20, 20, 20);
+  color: #fff;
+  flex-direction: column;
+}
+/*Fin Maquetacion basica*/
+
+/* Navbar */
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  justify-content: space-around;
+  background-color: rgb(31, 29, 29);
+}
+.login_movile {
+  display: none;
+}
+.logo {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.logo img {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo h2 {
+  font-size: 33px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color: #fff;
+}
+.links_movile {
+  display: none;
+}
+.links {
+  display: flex;
+  flex: 6;
+}
+.links ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.links ul li {
+  font-size: 22px;
+  list-style: none;
+}
+.links ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.links ul li a:hover {
+  color: rgb(194, 3, 3);
+}
+.login {
+  display: flex;
+  flex: 2;
+}
+.login ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+.login ul li {
+  list-style: none;
+  font-size: 18px;
+}
+.login ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.login ul li a:hover {
+  color: rgb(194, 3, 3);
+}
+.icon-search {
+  border-radius: 40px 40px;
+  background-color: #000;
+  padding: 12px 14px;
+}
+
+/* Ultimas peliculas*/
+
+.main_movies {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section_title {
+  text-align: center;
+}
+.section_title h2 {
+  font-size: 33px;
+}
+
+.section_catalogo {
+  height: 100%;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  position: inherit;
+  justify-content: space-evenly;
+  flex-flow: wrap row;
+}
+.section_catalogo .card {
+  height: 300px;
+  width: 240px;
+  border-radius: 14px;
+  margin: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.card:hover {
+  color: red;
+}
+.card a {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.card a img {
+  object-fit: cover;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+}
+.card img:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+  transition: 0.3s all;
+  height: 100%;
+  width: 100%;
+}
+.card h4 img:hover h4 {
+  color: red;
+}
+.card h4 {
+  text-align: center;
+  height: 20%;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Fin Ultimas peliculas*/
+
+/*Review Pelicula*/
+
+.main_movie {
+  width: 100vw;
+  display: flex;
+  padding: 40px;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  height: 89vh;
+}
+.portada {
+  margin: 20px;
+  text-align: center;
+}
+.portada .imagen {
+  height: 400px;
+}
+.portada .imagen img {
+  height: 100%;
+  border-radius: 7px;
+}
+.portada .titulo {
+  font-size: 18px;
+}
+.main_movie .info {
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.main_movie .info .descripcion {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.main_movie .info .calificacion{
+  font-size: 20px;
+  font-weight: 300;
+}
+.stars{
+  padding: 10px;
+  font-size: 25px;
+}
+.stars ul{
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+    direction: ltr;/* right to left */
+    unicode-bidi: normal;/* bidi de bidireccional */
+}
+.stars ul li{
+    margin-right: 20px;
+}
+.stars ul li i{
+ 
+   z-index: 5;
+}
+.stars ul li:hover{
+    color: #e5f509;
+    transform: scale(1.04);
+    cursor: pointer;
+    transition: 0.2s all;  
+}
+.radio-star{
+    margin-left:10px;
+    content: '';
+    z-index: 10;
+}
+.acciones{
+    display: flex;
+    padding-top: 20px;
+
+}
+.acciones a{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+   
+    color: #000;
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: .25em;
+    border: none;
+    font-weight: 600;
+}
+.btn-trailer{
+    background-color: #ece7e5;
+}
+.acciones a:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    transition: all .2s ease-in;
+    transform: scale(1.05);
+    animation-duration: .3s;
+}
+.estreno{
+    margin-bottom: 10px;
+}
+.estreno b{
+    font-size: 20px;
+    
+}
+
+/*Fin Review Pelicula*/
+
+
+.trailer{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.trailer_title{
+  text-align: center;
+  font-size: 30px;
+}
+.trailer_title a{
+  text-decoration: none;
+  color: #1e0688;
+}
+.trailer_video{
+  margin-top: 15px;
+}
+
+
+.menu_responsive {
+}
+
+/*Responsivo */
+@media (max-width: 600px) {
+  .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .logo h2 {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    order: 2;
+  }
+  .links_movile {
+    order: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 30px;
+  }
+  .links_movile a {
+    color: #fff;
+  }
+  .links {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  .login_movile {
+    display: flex;
+    align-items: center;
+    order: 3;
+  }
+
+  .login_movile a {
+    display: flex;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .menu_responsive {
+    height: 90vh;
+    margin-top: 10vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgb(37, 37, 37);
+    transition: width 0.5s linear;
+  }
+  .menu_responsive ul {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+  }
+  .menu_responsive ul li {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+  }
+  .menu_responsive ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .menu_responsive ul li a:hover {
+    text-decoration: none;
+    color: rgb(175, 31, 31);
+  }
+}
+
+@media (max-width: 900px) and (min-width: 600px) {
+  .login {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .logo h2 {
+    display: none;
+  }
+}
+
+/*Fin Responsivo */

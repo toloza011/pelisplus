@@ -14,7 +14,11 @@ import MoviesCatalogo from '../movies/MoviesCatalogo';
 import SeriesCatalogo from '../series/SeriesCatalogo';
 import Estrenos from '../Home/Estrenos';
 import { useHamburger } from '../../Hooks/useHamburger';
+import useUser from '../../Hooks/useUser';
 import Trailer from '../movies/Trailer'
+import Video from '../movies/Video'
+import Registro from '../users/Registro'
+import Login from '../users/Login'
 import Home from './Home';
 
 const App = () => {
@@ -23,6 +27,8 @@ const App = () => {
     const [menuOpen, setmenuOpen] = useHamburger(false);
     
     const {hamburger,openMenu} = useHamburger;
+    
+
     return (
         <div className="main">
             <Router>
@@ -40,12 +46,14 @@ const App = () => {
                 <Route path="/Estrenos">
                    <Estrenos />
                 </Route>
-                <Route path = "/Pelicula/:id" component={Movie}  />
-                <Route path="/trailer/:url" component={Trailer}  />
-                   
-                <Route path="/" >
-                  <Home />
-                </Route>
+                <Route path="/Registro" component={Registro} />   
+                <Route path="/Login"  component={Login} />   
+                <Route path = "/Pelicula/:id" exact strict component={Movie}  />
+                <Route path="/trailer/:url"  component={Trailer}  />
+                <Route path="/Ver/:id" exact strict component={Video}></Route>
+                {/* <Route path="/" render={(props)=> <Home {...props} />} /> */}
+                <Route path="/" component={Home} />
+                 
                 <Route path="*">
                   <Home />
                 </Route>

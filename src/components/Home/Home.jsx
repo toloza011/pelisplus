@@ -8,12 +8,12 @@ import {
     Route,
     Link
   } from "react-router-dom";
-const Home = () => {
+const Home = (props) => {
 
     const [menuOpen, setmenuOpen] = useHamburger(false);
     const {hamburger,openMenu} = useHamburger;
 
-
+    console.log("El usuario logueado en el home es: "+props);
   return (
     <>
       <div className="main_content_left"></div>
